@@ -1,0 +1,76 @@
+/* Set Inter font as specified in https://rsms.me/inter/inter.css */
+:root { 
+  font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
+
+/* Variables */
+:root {
+  --primary-400: #60a5fa;
+  --primary-500: #3b82f6;
+  --primary-600: #2563eb;
+  --primary-700: #1d4ed8;
+  --primary-800: #1e40af;
+  --primary-900: #1e3a8a;
+  --black-50: #fafafa;
+  --black-100: #f4f4f5;
+  --black-200: #e4e4e7;
+  --black-300: #d4d4d8;
+  --black-400: #a1a1aa;
+  --black-700: #3f3f46;
+  --black-800: #27272a;
+  --black-900: #18181b;
+  --secondary-400: #fb923c;
+  --seconary-600: #ea580c;
+}
+
+/* General HTML Element Styling */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  color: var(--black-800);
+}
+
+body {
+  font-weight: 400;
+  letter-spacing: -0.004em;
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--black-900);
+}
+
+h1 {
+  font-weight: 750;
+  font-size: 2.5rem;
+  letter-spacing: -0.055em;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  letter-spacing: -0.055em;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 650;
+  font-size: 1.2rem;
+  letter-spacing: -0.018em;
+}
+
+p {
+  line-height: 1.5rem;
+}
+

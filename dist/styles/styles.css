@@ -95,7 +95,12 @@ p {
   align-items: center;
 }
 
+.dd-menu {
+  cursor: pointer;
+}
+
 .dd-items {
+  display: none;
   color: var(--black-800);
   position: absolute;
   padding: 1.1rem 1.25rem;
@@ -117,4 +122,8 @@ p {
 
 .dd-item:hover {
   background-color: var(--black-100);
+}
+
+.dd-menu.visible .dd-items {
+  display: block;
 }

@@ -164,6 +164,7 @@ p {
   cursor: pointer;
   position: relative;
   display: inline-block;
+  margin-bottom: 0.75rem;
 }
 
 .dd-items {
@@ -177,6 +178,7 @@ p {
   border-radius: 6px;
   box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
   width: 100%;
+  z-index: 1;
 }
 
 .dd-item:not(:last-child) {
@@ -207,4 +209,87 @@ p {
 
 #tab-content {
   margin-bottom: 2rem;
+}
+
+/* Slideshow Styling */
+.slideshow-container {
+  margin-top: 4rem;
+  border: 2px solid var(--black-200);
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slideshow-images {
+  width: max-content;
+  display: flex;
+  transition: transform 0.5s;
+}
+
+.slideshow-images img {
+  height: 300px;
+  width: 300px;
+  user-select: none;
+}
+
+.slideshow-control {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.slideshow-control.previous {
+  left: 2px;
+}
+
+.slideshow-control.next {
+  right: 2px;
+}
+
+.slideshow-control.previous,
+.slideshow-control.next {
+  color: var(--black-50);
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.slideshow-control.previous:hover,
+.slideshow-control.next:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.slideshow-control.previous:active,
+.slideshow-control.next:active {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.slideshow-control.navigation {
+  left: calc(50% - 36px);
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.25rem 0.5rem;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+a.circle {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--black-50);
+}
+
+a.circle:hover {
+  background-color: var(--secondary-400);
+}
+
+a.circle:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+a.circle.selected {
+  background-color: var(--seconary-600);
 }

@@ -1,5 +1,6 @@
 import './dropdownMenu';
 import initializeTabContent from './navbarTabs';
-import './slideshow';
+import startSlideshow from './slideshow';
 
 initializeTabContent();
+startSlideshow();

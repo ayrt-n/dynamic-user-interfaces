@@ -6,6 +6,7 @@ const nextButton = document.querySelector('.slideshow-control.next');
 const numberOfSlides = [...slideshowImages.querySelectorAll('img')].length;
 const navigationButtons = document.querySelectorAll('a.circle');
 
+// Functionality related to switching between slides
 const updateNavigation = () => {
   navigationButtons.forEach((btn) => {
     btn.classList.remove('selected');
@@ -38,8 +39,22 @@ const selectSlide = (slideIndex) => {
   updateNavigation();
 };
 
-prevButton.addEventListener('click', prevSlide);
-nextButton.addEventListener('click', nextSlide);
+// Functionality related to autoplay
+const startSlideshow = () => {
+  setTimeout(() => {
+    nextSlide();
+    startSlideshow();
+  }, 5000);
+};
+
+prevButton.addEventListener('click', () => {
+  prevSlide();
+});
+
+nextButton.addEventListener('click', () => {
+  nextSlide();
+});
+
 navigationButtons.forEach((btn) => {
   const index = Number(btn.getAttribute('data-slide'));
 
@@ -47,3 +62,5 @@ navigationButtons.forEach((btn) => {
     selectSlide(index);
   });
 });
+
+export default startSlideshow;
